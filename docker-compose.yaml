@@ -1,0 +1,12 @@
+services:
+  trade-portal:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    container_name: trade-portal-prod
+    restart: unless-stopped
+
+volumes:
+  node_modules:
